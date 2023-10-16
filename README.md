@@ -46,9 +46,12 @@ play_game(chess_config, gpt_config, base_pgn=BASE_PGN, nmove=1, white_piece=Fals
 
 ### Data and analysis
 
-The data is stored in the `games` folder.
+The data is stored in the `games.tar.gz` of this repo. 
+I'm usually using zenodo, but the size of the data is manageable.  
+Decompress the archive to get `games` folder.
 
-``` ls
+``` 
+> ls
 game30da9c70-31ed-4489-9e93-9ef179661da4  game6a246b94-4511-4b34-908a-6f1fd5b838ac  game98a79424-b219-4764-a4d8-71f524454923  gamec9ba4fa3-b7a9-4953-b8d5-a25db0e10886  gameffa12232-8e93-4440-82d8-a0c8a6023c63
 game3179c6e9-935e-4f59-b932-268fd10356fc  game6a34daf4-4820-4eb0-a7ad-6a472d6506a2  game99371010-b5af-48d4-adbc-4fcfda798304  gameca445cfd-0076-4146-ba1b-c263c8cd8707
 ```
