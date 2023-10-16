@@ -2,7 +2,7 @@
 
 Source code supporting experiments presented in https://blog.mathieuacher.com/GPTsChessEloRatingLegalMoves/ 
 I've started with the GPT-3 chess experiment from https://github.com/clevcode/skynet-dev 
-and explore the variability space of 
+and explore the variability space of experiments (GPT variants, number of games, Stockfish skills, temperature, prompt, etc.)
 
 ## Install Python dependencies
 
