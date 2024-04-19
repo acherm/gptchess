@@ -5,6 +5,9 @@ import random
 from stockfish import Stockfish
 
 import openai
+from openai import OpenAI
+
+client = OpenAI(api_key=os.getenv('OPENAI_KEY'))
 import chess
 import chess.pgn
 import os
@@ -15,8 +18,8 @@ from parsing_moves_gpt import extract_move_chatgpt
 
 import uuid
 
-openai.organization = "" 
-openai.api_key = os.getenv('OPENAI_KEY')
+# TODO: The 'openai.organization' option isn't read in the client API. You will need to pass it when you instantiate the client, e.g. 'OpenAI(organization="")'
+# openai.organization = "" 
 
 BASE_PGN = """[Event "FIDE World Championship Match 2024"]
 [Site "Los Angeles, USA"]
@@ -198,25 +201,21 @@ def play_game(chess_config: ChessEngineConfig, gpt_config: GPTConfig, base_pgn=B
         
 
         if (chat_gpt):
-            response = openai.ChatCompletion.create(
-                model=model_gpt,
-                messages=[
-                    {"role": "system", "content": system_role_message},
-                    {"role": "user", "content": pgn}        
-                ], 
-                temperature=temperature,
-                max_tokens=max_tokens
-            )
+            response = client.chat.completions.create(model=model_gpt,
+            messages=[
+                {"role": "system", "content": system_role_message},
+                {"role": "user", "content": pgn}        
+            ], 
+            temperature=temperature,
+            max_tokens=max_tokens)
         else:
-            response = openai.Completion.create(
-                        model=model_gpt,
-                        prompt=pgn,
-                        temperature=temperature,
-                        max_tokens=max_tokens,
-                    )
+            response = client.completions.create(model=model_gpt,
+            prompt=pgn,
+            temperature=temperature,
+            max_tokens=max_tokens)
 
         if chat_gpt:
-            resp = response['choices'][0]['message']['content']
+            resp = response.choices[0].message.content
         else:
             resp = response.choices[0].text # completion 
 
@@ -309,25 +308,21 @@ def play_game(chess_config: ChessEngineConfig, gpt_config: GPTConfig, base_pgn=B
 
             log_msg(dir_name, str(msgs))
 
-            response = openai.ChatCompletion.create(
-                model=model_gpt,
-                messages=msgs, # [
-                    # {"role": "system", "content": system_role_message},
-                    # {"role": "user", "content": pgn}
-                # ], 
-                temperature=temperature,
-                max_tokens=max_tokens
-            )
+            response = client.chat.completions.create(model=model_gpt,
+            messages=msgs, # [
+                # {"role": "system", "content": system_role_message},
+                # {"role": "user", "content": pgn}
+            # ], 
+            temperature=temperature,
+            max_tokens=max_tokens)
         else:
-            response = openai.Completion.create(
-                        model=model_gpt,
-                        prompt=pgn,
-                        temperature=temperature,
-                        max_tokens=max_tokens,
-                    )      
+            response = client.completions.create(model=model_gpt,
+            prompt=pgn,
+            temperature=temperature,
+            max_tokens=max_tokens)      
 
         if chat_gpt:
-            resp = response['choices'][0]['message']['content']
+            resp = response.choices[0].message.content
         else:
             resp = response.choices[0].text # completion 
 

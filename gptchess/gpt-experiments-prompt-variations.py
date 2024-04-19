@@ -5,6 +5,9 @@ import random
 from stockfish import Stockfish
 
 import openai
+from openai import OpenAI
+
+
 import chess
 import chess.pgn
 import os
@@ -15,8 +18,10 @@ from parsing_moves_gpt import extract_move_chatgpt
 
 import uuid
 
-openai.organization = "" 
-openai.api_key = os.getenv('OPENAI_KEY')
+client = OpenAI(api_key=os.getenv('OPENAI_KEY'))
+
+# TODO: The 'openai.organization' option isn't read in the client API. You will need to pass it when you instantiate the client, e.g. 'OpenAI(organization="")'
+# openai.organization = "" 
 
 
 def setup_directory():
@@ -64,28 +69,20 @@ def play_game(gpt_config: GPTConfig, base_prompt=""):
         
 
  
-    response = openai.Completion.create(
-                model=model_gpt,
-                prompt=base_prompt,
-                temperature=temperature,
-                max_tokens=max_tokens,
-            )
+    response = client.completions.create(model=model_gpt,
+    prompt=base_prompt,
+    temperature=temperature,
+    max_tokens=max_tokens)
+
+    print(response)
+    print(response.choices[0])
 
     resp = response.choices[0].text # completion 
-
-
-
-
-    san_move = resp.strip().split()[0]
-    
-    try:
-        move = board.push_san(san_move)
-    except:
-        unknown_san = san_move
-        return        
+    print("resolved response", resp)
+    move = extract_move_chatgpt(resp)
 
  
-    return resp
+    return move
       
 BASE_PGN_HEADERS =  """[Event "FIDE World Championship Match 2024"]
 [Site "Los Angeles, USA"]
@@ -108,7 +105,8 @@ BASE_PGN_HEADERS =  """[Event "FIDE World Championship Match 2024"]
 
 PGN_POSITION = "1. e4 e5 2. Bc4 Nc6 3. Qh5"
 
-
+def mk_chess_prompt():
+    return BASE_PGN_HEADERS + '\n' + PGN_POSITION
 
 
 gpt_config = GPTConfig(
@@ -122,10 +120,10 @@ gpt_config = GPTConfig(
 # Call the refactored function.
 
 
-def mk_chess_prompt():
-    return BASE_PGN_HEADERS + PGN_POSITION
+
 
 prompt = mk_chess_prompt()
+print(prompt)
 res = play_game(gpt_config, base_prompt=prompt)
 print(res)
 
