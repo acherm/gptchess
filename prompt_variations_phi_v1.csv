@@ -1,0 +1,73 @@
+Result,WhiteName,BlackName,WhiteElo,BlackElo,IncludeWhiteTitle,IncludeBlackTitle,Move
+1-0,"Nepomniachtchi, Ian","Louapre, David",1000,1000,False,False,g6
+1-0,"Nepomniachtchi, Ian",XXX,1000,1000,False,False,g6
+1-0,"Louapre, David","Nepomniachtchi, Ian",1000,1000,False,False,g6
+1-0,"Louapre, David",XXX,1000,1000,False,False,Nf6
+1-0,XXX,"Nepomniachtchi, Ian",1000,1000,False,False,g6
+1-0,XXX,"Louapre, David",1000,1000,False,False,Nf6
+1-0,"Nepomniachtchi, Ian","Louapre, David",1400,1400,False,False,g6
+1-0,"Nepomniachtchi, Ian",XXX,1400,1400,False,False,g6
+1-0,"Louapre, David","Nepomniachtchi, Ian",1400,1400,False,False,g6
+1-0,"Louapre, David",XXX,1400,1400,False,False,Nf6
+1-0,XXX,"Nepomniachtchi, Ian",1400,1400,False,False,g6
+1-0,XXX,"Louapre, David",1400,1400,False,False,Nf6
+1-0,"Nepomniachtchi, Ian","Louapre, David",1700,1700,False,False,g6
+1-0,"Nepomniachtchi, Ian",XXX,1700,1700,False,False,g6
+1-0,"Louapre, David","Nepomniachtchi, Ian",1700,1700,False,False,g6
+1-0,"Louapre, David",XXX,1700,1700,False,False,Nf6
+1-0,XXX,"Nepomniachtchi, Ian",1700,1700,False,False,g6
+1-0,XXX,"Louapre, David",1700,1700,False,False,Nf6
+1-0,"Nepomniachtchi, Ian","Louapre, David",1800,1800,False,False,Nf6
+1-0,"Nepomniachtchi, Ian",XXX,1800,1800,False,False,g6
+1-0,"Louapre, David","Nepomniachtchi, Ian",1800,1800,False,False,g6
+1-0,"Louapre, David",XXX,1800,1800,False,False,Nf6
+1-0,XXX,"Nepomniachtchi, Ian",1800,1800,False,False,g6
+1-0,XXX,"Louapre, David",1800,1800,False,False,Nf6
+1-0,"Nepomniachtchi, Ian","Louapre, David",2000,2000,False,False,g6
+1-0,"Nepomniachtchi, Ian",XXX,2000,2000,False,False,g6
+1-0,"Louapre, David","Nepomniachtchi, Ian",2000,2000,False,False,g6
+1-0,"Louapre, David",XXX,2000,2000,False,False,g6
+1-0,XXX,"Nepomniachtchi, Ian",2000,2000,False,False,g6
+1-0,XXX,"Louapre, David",2000,2000,False,False,g6
+1-0,"Nepomniachtchi, Ian","Louapre, David",2900,2900,False,False,g6
+1-0,"Nepomniachtchi, Ian",XXX,2900,2900,False,False,g6
+1-0,"Louapre, David","Nepomniachtchi, Ian",2900,2900,False,False,g6
+1-0,"Louapre, David",XXX,2900,2900,False,False,g6
+1-0,XXX,"Nepomniachtchi, Ian",2900,2900,False,False,g6
+1-0,XXX,"Louapre, David",2900,2900,False,False,g6
+0-1,"Nepomniachtchi, Ian","Louapre, David",1000,1000,False,False,g6
+0-1,"Nepomniachtchi, Ian",XXX,1000,1000,False,False,g6
+0-1,"Louapre, David","Nepomniachtchi, Ian",1000,1000,False,False,g6
+0-1,"Louapre, David",XXX,1000,1000,False,False,Nf6
+0-1,XXX,"Nepomniachtchi, Ian",1000,1000,False,False,g6
+0-1,XXX,"Louapre, David",1000,1000,False,False,Nf6
+0-1,"Nepomniachtchi, Ian","Louapre, David",1400,1400,False,False,g6
+0-1,"Nepomniachtchi, Ian",XXX,1400,1400,False,False,g6
+0-1,"Louapre, David","Nepomniachtchi, Ian",1400,1400,False,False,g6
+0-1,"Louapre, David",XXX,1400,1400,False,False,Nf6
+0-1,XXX,"Nepomniachtchi, Ian",1400,1400,False,False,g6
+0-1,XXX,"Louapre, David",1400,1400,False,False,Nf6
+0-1,"Nepomniachtchi, Ian","Louapre, David",1700,1700,False,False,g6
+0-1,"Nepomniachtchi, Ian",XXX,1700,1700,False,False,g6
+0-1,"Louapre, David","Nepomniachtchi, Ian",1700,1700,False,False,g6
+0-1,"Louapre, David",XXX,1700,1700,False,False,Nf6
+0-1,XXX,"Nepomniachtchi, Ian",1700,1700,False,False,g6
+0-1,XXX,"Louapre, David",1700,1700,False,False,Nf6
+0-1,"Nepomniachtchi, Ian","Louapre, David",1800,1800,False,False,Nf6
+0-1,"Nepomniachtchi, Ian",XXX,1800,1800,False,False,g6
+0-1,"Louapre, David","Nepomniachtchi, Ian",1800,1800,False,False,g6
+0-1,"Louapre, David",XXX,1800,1800,False,False,Nf6
+0-1,XXX,"Nepomniachtchi, Ian",1800,1800,False,False,g6
+0-1,XXX,"Louapre, David",1800,1800,False,False,Nf6
+0-1,"Nepomniachtchi, Ian","Louapre, David",2000,2000,False,False,g6
+0-1,"Nepomniachtchi, Ian",XXX,2000,2000,False,False,g6
+0-1,"Louapre, David","Nepomniachtchi, Ian",2000,2000,False,False,g6
+0-1,"Louapre, David",XXX,2000,2000,False,False,g6
+0-1,XXX,"Nepomniachtchi, Ian",2000,2000,False,False,g6
+0-1,XXX,"Louapre, David",2000,2000,False,False,g6
+0-1,"Nepomniachtchi, Ian","Louapre, David",2900,2900,False,False,g6
+0-1,"Nepomniachtchi, Ian",XXX,2900,2900,False,False,g6
+0-1,"Louapre, David","Nepomniachtchi, Ian",2900,2900,False,False,g6
+0-1,"Louapre, David",XXX,2900,2900,False,False,g6
+0-1,XXX,"Nepomniachtchi, Ian",2900,2900,False,False,g6
+0-1,XXX,"Louapre, David",2900,2900,False,False,g6

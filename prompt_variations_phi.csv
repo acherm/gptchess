@@ -1,0 +1,361 @@
+Result,WhiteName,BlackName,WhiteElo,BlackElo,IncludeWhiteTitle,IncludeBlackTitle,Move
+1-0,"Nepomniachtchi, Ian","Kramnik, Vladimir",1000,1000,False,False,g6
+1-0,"Nepomniachtchi, Ian","Giraud, Thibaut",1000,1000,False,False,g6
+1-0,"Nepomniachtchi, Ian","Louapre, David",1000,1000,False,False,g6
+1-0,"Nepomniachtchi, Ian",XXX,1000,1000,False,False,g6
+1-0,"Kramnik, Vladimir","Nepomniachtchi, Ian",1000,1000,False,False,g6
+1-0,"Kramnik, Vladimir","Giraud, Thibaut",1000,1000,False,False,g6
+1-0,"Kramnik, Vladimir","Louapre, David",1000,1000,False,False,g6
+1-0,"Kramnik, Vladimir",XXX,1000,1000,False,False,g6
+1-0,"Giraud, Thibaut","Nepomniachtchi, Ian",1000,1000,False,False,g6
+1-0,"Giraud, Thibaut","Kramnik, Vladimir",1000,1000,False,False,g6
+1-0,"Giraud, Thibaut","Louapre, David",1000,1000,False,False,g6
+1-0,"Giraud, Thibaut",XXX,1000,1000,False,False,Nf6
+1-0,"Louapre, David","Nepomniachtchi, Ian",1000,1000,False,False,g6
+1-0,"Louapre, David","Kramnik, Vladimir",1000,1000,False,False,g6
+1-0,"Louapre, David","Giraud, Thibaut",1000,1000,False,False,Nf6
+1-0,"Louapre, David",XXX,1000,1000,False,False,Nf6
+1-0,XXX,"Nepomniachtchi, Ian",1000,1000,False,False,g6
+1-0,XXX,"Kramnik, Vladimir",1000,1000,False,False,g6
+1-0,XXX,"Giraud, Thibaut",1000,1000,False,False,Nf6
+1-0,XXX,"Louapre, David",1000,1000,False,False,Nf6
+1-0,"Nepomniachtchi, Ian","Kramnik, Vladimir",1400,1400,False,False,g6
+1-0,"Nepomniachtchi, Ian","Giraud, Thibaut",1400,1400,False,False,g6
+1-0,"Nepomniachtchi, Ian","Louapre, David",1400,1400,False,False,g6
+1-0,"Nepomniachtchi, Ian",XXX,1400,1400,False,False,g6
+1-0,"Kramnik, Vladimir","Nepomniachtchi, Ian",1400,1400,False,False,g6
+1-0,"Kramnik, Vladimir","Giraud, Thibaut",1400,1400,False,False,g6
+1-0,"Kramnik, Vladimir","Louapre, David",1400,1400,False,False,g6
+1-0,"Kramnik, Vladimir",XXX,1400,1400,False,False,Nf6
+1-0,"Giraud, Thibaut","Nepomniachtchi, Ian",1400,1400,False,False,g6
+1-0,"Giraud, Thibaut","Kramnik, Vladimir",1400,1400,False,False,g6
+1-0,"Giraud, Thibaut","Louapre, David",1400,1400,False,False,g6
+1-0,"Giraud, Thibaut",XXX,1400,1400,False,False,Nf6
+1-0,"Louapre, David","Nepomniachtchi, Ian",1400,1400,False,False,g6
+1-0,"Louapre, David","Kramnik, Vladimir",1400,1400,False,False,g6
+1-0,"Louapre, David","Giraud, Thibaut",1400,1400,False,False,Nf6
+1-0,"Louapre, David",XXX,1400,1400,False,False,Nf6
+1-0,XXX,"Nepomniachtchi, Ian",1400,1400,False,False,g6
+1-0,XXX,"Kramnik, Vladimir",1400,1400,False,False,g6
+1-0,XXX,"Giraud, Thibaut",1400,1400,False,False,Nf6
+1-0,XXX,"Louapre, David",1400,1400,False,False,Nf6
+1-0,"Nepomniachtchi, Ian","Kramnik, Vladimir",1700,1700,False,False,g6
+1-0,"Nepomniachtchi, Ian","Giraud, Thibaut",1700,1700,False,False,g6
+1-0,"Nepomniachtchi, Ian","Louapre, David",1700,1700,False,False,g6
+1-0,"Nepomniachtchi, Ian",XXX,1700,1700,False,False,g6
+1-0,"Kramnik, Vladimir","Nepomniachtchi, Ian",1700,1700,False,False,g6
+1-0,"Kramnik, Vladimir","Giraud, Thibaut",1700,1700,False,False,g6
+1-0,"Kramnik, Vladimir","Louapre, David",1700,1700,False,False,g6
+1-0,"Kramnik, Vladimir",XXX,1700,1700,False,False,g6
+1-0,"Giraud, Thibaut","Nepomniachtchi, Ian",1700,1700,False,False,g6
+1-0,"Giraud, Thibaut","Kramnik, Vladimir",1700,1700,False,False,g6
+1-0,"Giraud, Thibaut","Louapre, David",1700,1700,False,False,g6
+1-0,"Giraud, Thibaut",XXX,1700,1700,False,False,Nf6
+1-0,"Louapre, David","Nepomniachtchi, Ian",1700,1700,False,False,g6
+1-0,"Louapre, David","Kramnik, Vladimir",1700,1700,False,False,g6
+1-0,"Louapre, David","Giraud, Thibaut",1700,1700,False,False,Nf6
+1-0,"Louapre, David",XXX,1700,1700,False,False,Nf6
+1-0,XXX,"Nepomniachtchi, Ian",1700,1700,False,False,g6
+1-0,XXX,"Kramnik, Vladimir",1700,1700,False,False,g6
+1-0,XXX,"Giraud, Thibaut",1700,1700,False,False,Nf6
+1-0,XXX,"Louapre, David",1700,1700,False,False,Nf6
+1-0,"Nepomniachtchi, Ian","Kramnik, Vladimir",1800,1800,False,False,g6
+1-0,"Nepomniachtchi, Ian","Giraud, Thibaut",1800,1800,False,False,g6
+1-0,"Nepomniachtchi, Ian","Louapre, David",1800,1800,False,False,Nf6
+1-0,"Nepomniachtchi, Ian",XXX,1800,1800,False,False,Nf6
+1-0,"Kramnik, Vladimir","Nepomniachtchi, Ian",1800,1800,False,False,g6
+1-0,"Kramnik, Vladimir","Giraud, Thibaut",1800,1800,False,False,g6
+1-0,"Kramnik, Vladimir","Louapre, David",1800,1800,False,False,g6
+1-0,"Kramnik, Vladimir",XXX,1800,1800,False,False,Nf6
+1-0,"Giraud, Thibaut","Nepomniachtchi, Ian",1800,1800,False,False,g6
+1-0,"Giraud, Thibaut","Kramnik, Vladimir",1800,1800,False,False,g6
+1-0,"Giraud, Thibaut","Louapre, David",1800,1800,False,False,Nf6
+1-0,"Giraud, Thibaut",XXX,1800,1800,False,False,Nf6
+1-0,"Louapre, David","Nepomniachtchi, Ian",1800,1800,False,False,g6
+1-0,"Louapre, David","Kramnik, Vladimir",1800,1800,False,False,g6
+1-0,"Louapre, David","Giraud, Thibaut",1800,1800,False,False,Nf6
+1-0,"Louapre, David",XXX,1800,1800,False,False,Nf6
+1-0,XXX,"Nepomniachtchi, Ian",1800,1800,False,False,g6
+1-0,XXX,"Kramnik, Vladimir",1800,1800,False,False,g6
+1-0,XXX,"Giraud, Thibaut",1800,1800,False,False,Nf6
+1-0,XXX,"Louapre, David",1800,1800,False,False,Nf6
+1-0,"Nepomniachtchi, Ian","Kramnik, Vladimir",2000,2000,False,False,g6
+1-0,"Nepomniachtchi, Ian","Giraud, Thibaut",2000,2000,False,False,g6
+1-0,"Nepomniachtchi, Ian","Louapre, David",2000,2000,False,False,g6
+1-0,"Nepomniachtchi, Ian",XXX,2000,2000,False,False,g6
+1-0,"Kramnik, Vladimir","Nepomniachtchi, Ian",2000,2000,False,False,g6
+1-0,"Kramnik, Vladimir","Giraud, Thibaut",2000,2000,False,False,g6
+1-0,"Kramnik, Vladimir","Louapre, David",2000,2000,False,False,g6
+1-0,"Kramnik, Vladimir",XXX,2000,2000,False,False,g6
+1-0,"Giraud, Thibaut","Nepomniachtchi, Ian",2000,2000,False,False,g6
+1-0,"Giraud, Thibaut","Kramnik, Vladimir",2000,2000,False,False,g6
+1-0,"Giraud, Thibaut","Louapre, David",2000,2000,False,False,g6
+1-0,"Giraud, Thibaut",XXX,2000,2000,False,False,g6
+1-0,"Louapre, David","Nepomniachtchi, Ian",2000,2000,False,False,g6
+1-0,"Louapre, David","Kramnik, Vladimir",2000,2000,False,False,g6
+1-0,"Louapre, David","Giraud, Thibaut",2000,2000,False,False,g6
+1-0,"Louapre, David",XXX,2000,2000,False,False,g6
+1-0,XXX,"Nepomniachtchi, Ian",2000,2000,False,False,g6
+1-0,XXX,"Kramnik, Vladimir",2000,2000,False,False,g6
+1-0,XXX,"Giraud, Thibaut",2000,2000,False,False,g6
+1-0,XXX,"Louapre, David",2000,2000,False,False,g6
+1-0,"Nepomniachtchi, Ian","Kramnik, Vladimir",2900,2900,False,False,g6
+1-0,"Nepomniachtchi, Ian","Giraud, Thibaut",2900,2900,False,False,g6
+1-0,"Nepomniachtchi, Ian","Louapre, David",2900,2900,False,False,g6
+1-0,"Nepomniachtchi, Ian",XXX,2900,2900,False,False,g6
+1-0,"Kramnik, Vladimir","Nepomniachtchi, Ian",2900,2900,False,False,g6
+1-0,"Kramnik, Vladimir","Giraud, Thibaut",2900,2900,False,False,g6
+1-0,"Kramnik, Vladimir","Louapre, David",2900,2900,False,False,g6
+1-0,"Kramnik, Vladimir",XXX,2900,2900,False,False,g6
+1-0,"Giraud, Thibaut","Nepomniachtchi, Ian",2900,2900,False,False,g6
+1-0,"Giraud, Thibaut","Kramnik, Vladimir",2900,2900,False,False,g6
+1-0,"Giraud, Thibaut","Louapre, David",2900,2900,False,False,g6
+1-0,"Giraud, Thibaut",XXX,2900,2900,False,False,g6
+1-0,"Louapre, David","Nepomniachtchi, Ian",2900,2900,False,False,g6
+1-0,"Louapre, David","Kramnik, Vladimir",2900,2900,False,False,g6
+1-0,"Louapre, David","Giraud, Thibaut",2900,2900,False,False,g6
+1-0,"Louapre, David",XXX,2900,2900,False,False,g6
+1-0,XXX,"Nepomniachtchi, Ian",2900,2900,False,False,g6
+1-0,XXX,"Kramnik, Vladimir",2900,2900,False,False,g6
+1-0,XXX,"Giraud, Thibaut",2900,2900,False,False,g6
+1-0,XXX,"Louapre, David",2900,2900,False,False,g6
+1/2-1/2,"Nepomniachtchi, Ian","Kramnik, Vladimir",1000,1000,False,False,g6
+1/2-1/2,"Nepomniachtchi, Ian","Giraud, Thibaut",1000,1000,False,False,g6
+1/2-1/2,"Nepomniachtchi, Ian","Louapre, David",1000,1000,False,False,g6
+1/2-1/2,"Nepomniachtchi, Ian",XXX,1000,1000,False,False,g6
+1/2-1/2,"Kramnik, Vladimir","Nepomniachtchi, Ian",1000,1000,False,False,g6
+1/2-1/2,"Kramnik, Vladimir","Giraud, Thibaut",1000,1000,False,False,g6
+1/2-1/2,"Kramnik, Vladimir","Louapre, David",1000,1000,False,False,g6
+1/2-1/2,"Kramnik, Vladimir",XXX,1000,1000,False,False,g6
+1/2-1/2,"Giraud, Thibaut","Nepomniachtchi, Ian",1000,1000,False,False,g6
+1/2-1/2,"Giraud, Thibaut","Kramnik, Vladimir",1000,1000,False,False,g6
+1/2-1/2,"Giraud, Thibaut","Louapre, David",1000,1000,False,False,g6
+1/2-1/2,"Giraud, Thibaut",XXX,1000,1000,False,False,Nf6
+1/2-1/2,"Louapre, David","Nepomniachtchi, Ian",1000,1000,False,False,g6
+1/2-1/2,"Louapre, David","Kramnik, Vladimir",1000,1000,False,False,g6
+1/2-1/2,"Louapre, David","Giraud, Thibaut",1000,1000,False,False,Nf6
+1/2-1/2,"Louapre, David",XXX,1000,1000,False,False,Nf6
+1/2-1/2,XXX,"Nepomniachtchi, Ian",1000,1000,False,False,g6
+1/2-1/2,XXX,"Kramnik, Vladimir",1000,1000,False,False,g6
+1/2-1/2,XXX,"Giraud, Thibaut",1000,1000,False,False,Nf6
+1/2-1/2,XXX,"Louapre, David",1000,1000,False,False,Nf6
+1/2-1/2,"Nepomniachtchi, Ian","Kramnik, Vladimir",1400,1400,False,False,g6
+1/2-1/2,"Nepomniachtchi, Ian","Giraud, Thibaut",1400,1400,False,False,g6
+1/2-1/2,"Nepomniachtchi, Ian","Louapre, David",1400,1400,False,False,g6
+1/2-1/2,"Nepomniachtchi, Ian",XXX,1400,1400,False,False,g6
+1/2-1/2,"Kramnik, Vladimir","Nepomniachtchi, Ian",1400,1400,False,False,g6
+1/2-1/2,"Kramnik, Vladimir","Giraud, Thibaut",1400,1400,False,False,g6
+1/2-1/2,"Kramnik, Vladimir","Louapre, David",1400,1400,False,False,g6
+1/2-1/2,"Kramnik, Vladimir",XXX,1400,1400,False,False,g6
+1/2-1/2,"Giraud, Thibaut","Nepomniachtchi, Ian",1400,1400,False,False,g6
+1/2-1/2,"Giraud, Thibaut","Kramnik, Vladimir",1400,1400,False,False,g6
+1/2-1/2,"Giraud, Thibaut","Louapre, David",1400,1400,False,False,g6
+1/2-1/2,"Giraud, Thibaut",XXX,1400,1400,False,False,Nf6
+1/2-1/2,"Louapre, David","Nepomniachtchi, Ian",1400,1400,False,False,g6
+1/2-1/2,"Louapre, David","Kramnik, Vladimir",1400,1400,False,False,g6
+1/2-1/2,"Louapre, David","Giraud, Thibaut",1400,1400,False,False,Nf6
+1/2-1/2,"Louapre, David",XXX,1400,1400,False,False,Nf6
+1/2-1/2,XXX,"Nepomniachtchi, Ian",1400,1400,False,False,g6
+1/2-1/2,XXX,"Kramnik, Vladimir",1400,1400,False,False,g6
+1/2-1/2,XXX,"Giraud, Thibaut",1400,1400,False,False,Nf6
+1/2-1/2,XXX,"Louapre, David",1400,1400,False,False,Nf6
+1/2-1/2,"Nepomniachtchi, Ian","Kramnik, Vladimir",1700,1700,False,False,g6
+1/2-1/2,"Nepomniachtchi, Ian","Giraud, Thibaut",1700,1700,False,False,g6
+1/2-1/2,"Nepomniachtchi, Ian","Louapre, David",1700,1700,False,False,g6
+1/2-1/2,"Nepomniachtchi, Ian",XXX,1700,1700,False,False,g6
+1/2-1/2,"Kramnik, Vladimir","Nepomniachtchi, Ian",1700,1700,False,False,g6
+1/2-1/2,"Kramnik, Vladimir","Giraud, Thibaut",1700,1700,False,False,g6
+1/2-1/2,"Kramnik, Vladimir","Louapre, David",1700,1700,False,False,g6
+1/2-1/2,"Kramnik, Vladimir",XXX,1700,1700,False,False,g6
+1/2-1/2,"Giraud, Thibaut","Nepomniachtchi, Ian",1700,1700,False,False,g6
+1/2-1/2,"Giraud, Thibaut","Kramnik, Vladimir",1700,1700,False,False,g6
+1/2-1/2,"Giraud, Thibaut","Louapre, David",1700,1700,False,False,g6
+1/2-1/2,"Giraud, Thibaut",XXX,1700,1700,False,False,Nf6
+1/2-1/2,"Louapre, David","Nepomniachtchi, Ian",1700,1700,False,False,g6
+1/2-1/2,"Louapre, David","Kramnik, Vladimir",1700,1700,False,False,g6
+1/2-1/2,"Louapre, David","Giraud, Thibaut",1700,1700,False,False,g6
+1/2-1/2,"Louapre, David",XXX,1700,1700,False,False,g6
+1/2-1/2,XXX,"Nepomniachtchi, Ian",1700,1700,False,False,g6
+1/2-1/2,XXX,"Kramnik, Vladimir",1700,1700,False,False,g6
+1/2-1/2,XXX,"Giraud, Thibaut",1700,1700,False,False,g6
+1/2-1/2,XXX,"Louapre, David",1700,1700,False,False,g6
+1/2-1/2,"Nepomniachtchi, Ian","Kramnik, Vladimir",1800,1800,False,False,g6
+1/2-1/2,"Nepomniachtchi, Ian","Giraud, Thibaut",1800,1800,False,False,g6
+1/2-1/2,"Nepomniachtchi, Ian","Louapre, David",1800,1800,False,False,g6
+1/2-1/2,"Nepomniachtchi, Ian",XXX,1800,1800,False,False,g6
+1/2-1/2,"Kramnik, Vladimir","Nepomniachtchi, Ian",1800,1800,False,False,g6
+1/2-1/2,"Kramnik, Vladimir","Giraud, Thibaut",1800,1800,False,False,g6
+1/2-1/2,"Kramnik, Vladimir","Louapre, David",1800,1800,False,False,g6
+1/2-1/2,"Kramnik, Vladimir",XXX,1800,1800,False,False,g6
+1/2-1/2,"Giraud, Thibaut","Nepomniachtchi, Ian",1800,1800,False,False,g6
+1/2-1/2,"Giraud, Thibaut","Kramnik, Vladimir",1800,1800,False,False,g6
+1/2-1/2,"Giraud, Thibaut","Louapre, David",1800,1800,False,False,g6
+1/2-1/2,"Giraud, Thibaut",XXX,1800,1800,False,False,Nf6
+1/2-1/2,"Louapre, David","Nepomniachtchi, Ian",1800,1800,False,False,g6
+1/2-1/2,"Louapre, David","Kramnik, Vladimir",1800,1800,False,False,g6
+1/2-1/2,"Louapre, David","Giraud, Thibaut",1800,1800,False,False,g6
+1/2-1/2,"Louapre, David",XXX,1800,1800,False,False,g6
+1/2-1/2,XXX,"Nepomniachtchi, Ian",1800,1800,False,False,g6
+1/2-1/2,XXX,"Kramnik, Vladimir",1800,1800,False,False,g6
+1/2-1/2,XXX,"Giraud, Thibaut",1800,1800,False,False,Nf6
+1/2-1/2,XXX,"Louapre, David",1800,1800,False,False,g6
+1/2-1/2,"Nepomniachtchi, Ian","Kramnik, Vladimir",2000,2000,False,False,g6
+1/2-1/2,"Nepomniachtchi, Ian","Giraud, Thibaut",2000,2000,False,False,g6
+1/2-1/2,"Nepomniachtchi, Ian","Louapre, David",2000,2000,False,False,g6
+1/2-1/2,"Nepomniachtchi, Ian",XXX,2000,2000,False,False,g6
+1/2-1/2,"Kramnik, Vladimir","Nepomniachtchi, Ian",2000,2000,False,False,g6
+1/2-1/2,"Kramnik, Vladimir","Giraud, Thibaut",2000,2000,False,False,g6
+1/2-1/2,"Kramnik, Vladimir","Louapre, David",2000,2000,False,False,g6
+1/2-1/2,"Kramnik, Vladimir",XXX,2000,2000,False,False,g6
+1/2-1/2,"Giraud, Thibaut","Nepomniachtchi, Ian",2000,2000,False,False,g6
+1/2-1/2,"Giraud, Thibaut","Kramnik, Vladimir",2000,2000,False,False,g6
+1/2-1/2,"Giraud, Thibaut","Louapre, David",2000,2000,False,False,g6
+1/2-1/2,"Giraud, Thibaut",XXX,2000,2000,False,False,g6
+1/2-1/2,"Louapre, David","Nepomniachtchi, Ian",2000,2000,False,False,g6
+1/2-1/2,"Louapre, David","Kramnik, Vladimir",2000,2000,False,False,g6
+1/2-1/2,"Louapre, David","Giraud, Thibaut",2000,2000,False,False,g6
+1/2-1/2,"Louapre, David",XXX,2000,2000,False,False,g6
+1/2-1/2,XXX,"Nepomniachtchi, Ian",2000,2000,False,False,g6
+1/2-1/2,XXX,"Kramnik, Vladimir",2000,2000,False,False,g6
+1/2-1/2,XXX,"Giraud, Thibaut",2000,2000,False,False,g6
+1/2-1/2,XXX,"Louapre, David",2000,2000,False,False,g6
+1/2-1/2,"Nepomniachtchi, Ian","Kramnik, Vladimir",2900,2900,False,False,g6
+1/2-1/2,"Nepomniachtchi, Ian","Giraud, Thibaut",2900,2900,False,False,g6
+1/2-1/2,"Nepomniachtchi, Ian","Louapre, David",2900,2900,False,False,g6
+1/2-1/2,"Nepomniachtchi, Ian",XXX,2900,2900,False,False,g6
+1/2-1/2,"Kramnik, Vladimir","Nepomniachtchi, Ian",2900,2900,False,False,g6
+1/2-1/2,"Kramnik, Vladimir","Giraud, Thibaut",2900,2900,False,False,g6
+1/2-1/2,"Kramnik, Vladimir","Louapre, David",2900,2900,False,False,g6
+1/2-1/2,"Kramnik, Vladimir",XXX,2900,2900,False,False,g6
+1/2-1/2,"Giraud, Thibaut","Nepomniachtchi, Ian",2900,2900,False,False,g6
+1/2-1/2,"Giraud, Thibaut","Kramnik, Vladimir",2900,2900,False,False,g6
+1/2-1/2,"Giraud, Thibaut","Louapre, David",2900,2900,False,False,g6
+1/2-1/2,"Giraud, Thibaut",XXX,2900,2900,False,False,g6
+1/2-1/2,"Louapre, David","Nepomniachtchi, Ian",2900,2900,False,False,g6
+1/2-1/2,"Louapre, David","Kramnik, Vladimir",2900,2900,False,False,g6
+1/2-1/2,"Louapre, David","Giraud, Thibaut",2900,2900,False,False,g6
+1/2-1/2,"Louapre, David",XXX,2900,2900,False,False,g6
+1/2-1/2,XXX,"Nepomniachtchi, Ian",2900,2900,False,False,g6
+1/2-1/2,XXX,"Kramnik, Vladimir",2900,2900,False,False,g6
+1/2-1/2,XXX,"Giraud, Thibaut",2900,2900,False,False,g6
+1/2-1/2,XXX,"Louapre, David",2900,2900,False,False,g6
+0-1,"Nepomniachtchi, Ian","Kramnik, Vladimir",1000,1000,False,False,g6
+0-1,"Nepomniachtchi, Ian","Giraud, Thibaut",1000,1000,False,False,g6
+0-1,"Nepomniachtchi, Ian","Louapre, David",1000,1000,False,False,g6
+0-1,"Nepomniachtchi, Ian",XXX,1000,1000,False,False,g6
+0-1,"Kramnik, Vladimir","Nepomniachtchi, Ian",1000,1000,False,False,g6
+0-1,"Kramnik, Vladimir","Giraud, Thibaut",1000,1000,False,False,g6
+0-1,"Kramnik, Vladimir","Louapre, David",1000,1000,False,False,g6
+0-1,"Kramnik, Vladimir",XXX,1000,1000,False,False,g6
+0-1,"Giraud, Thibaut","Nepomniachtchi, Ian",1000,1000,False,False,g6
+0-1,"Giraud, Thibaut","Kramnik, Vladimir",1000,1000,False,False,g6
+0-1,"Giraud, Thibaut","Louapre, David",1000,1000,False,False,g6
+0-1,"Giraud, Thibaut",XXX,1000,1000,False,False,Nf6
+0-1,"Louapre, David","Nepomniachtchi, Ian",1000,1000,False,False,g6
+0-1,"Louapre, David","Kramnik, Vladimir",1000,1000,False,False,g6
+0-1,"Louapre, David","Giraud, Thibaut",1000,1000,False,False,Nf6
+0-1,"Louapre, David",XXX,1000,1000,False,False,Nf6
+0-1,XXX,"Nepomniachtchi, Ian",1000,1000,False,False,g6
+0-1,XXX,"Kramnik, Vladimir",1000,1000,False,False,g6
+0-1,XXX,"Giraud, Thibaut",1000,1000,False,False,Nf6
+0-1,XXX,"Louapre, David",1000,1000,False,False,Nf6
+0-1,"Nepomniachtchi, Ian","Kramnik, Vladimir",1400,1400,False,False,g6
+0-1,"Nepomniachtchi, Ian","Giraud, Thibaut",1400,1400,False,False,g6
+0-1,"Nepomniachtchi, Ian","Louapre, David",1400,1400,False,False,g6
+0-1,"Nepomniachtchi, Ian",XXX,1400,1400,False,False,g6
+0-1,"Kramnik, Vladimir","Nepomniachtchi, Ian",1400,1400,False,False,g6
+0-1,"Kramnik, Vladimir","Giraud, Thibaut",1400,1400,False,False,g6
+0-1,"Kramnik, Vladimir","Louapre, David",1400,1400,False,False,g6
+0-1,"Kramnik, Vladimir",XXX,1400,1400,False,False,Nf6
+0-1,"Giraud, Thibaut","Nepomniachtchi, Ian",1400,1400,False,False,g6
+0-1,"Giraud, Thibaut","Kramnik, Vladimir",1400,1400,False,False,g6
+0-1,"Giraud, Thibaut","Louapre, David",1400,1400,False,False,g6
+0-1,"Giraud, Thibaut",XXX,1400,1400,False,False,Nf6
+0-1,"Louapre, David","Nepomniachtchi, Ian",1400,1400,False,False,g6
+0-1,"Louapre, David","Kramnik, Vladimir",1400,1400,False,False,g6
+0-1,"Louapre, David","Giraud, Thibaut",1400,1400,False,False,g6
+0-1,"Louapre, David",XXX,1400,1400,False,False,Nf6
+0-1,XXX,"Nepomniachtchi, Ian",1400,1400,False,False,g6
+0-1,XXX,"Kramnik, Vladimir",1400,1400,False,False,g6
+0-1,XXX,"Giraud, Thibaut",1400,1400,False,False,Nf6
+0-1,XXX,"Louapre, David",1400,1400,False,False,Nf6
+0-1,"Nepomniachtchi, Ian","Kramnik, Vladimir",1700,1700,False,False,g6
+0-1,"Nepomniachtchi, Ian","Giraud, Thibaut",1700,1700,False,False,g6
+0-1,"Nepomniachtchi, Ian","Louapre, David",1700,1700,False,False,g6
+0-1,"Nepomniachtchi, Ian",XXX,1700,1700,False,False,g6
+0-1,"Kramnik, Vladimir","Nepomniachtchi, Ian",1700,1700,False,False,g6
+0-1,"Kramnik, Vladimir","Giraud, Thibaut",1700,1700,False,False,g6
+0-1,"Kramnik, Vladimir","Louapre, David",1700,1700,False,False,g6
+0-1,"Kramnik, Vladimir",XXX,1700,1700,False,False,Nf6
+0-1,"Giraud, Thibaut","Nepomniachtchi, Ian",1700,1700,False,False,g6
+0-1,"Giraud, Thibaut","Kramnik, Vladimir",1700,1700,False,False,g6
+0-1,"Giraud, Thibaut","Louapre, David",1700,1700,False,False,Nf6
+0-1,"Giraud, Thibaut",XXX,1700,1700,False,False,Nf6
+0-1,"Louapre, David","Nepomniachtchi, Ian",1700,1700,False,False,g6
+0-1,"Louapre, David","Kramnik, Vladimir",1700,1700,False,False,g6
+0-1,"Louapre, David","Giraud, Thibaut",1700,1700,False,False,Nf6
+0-1,"Louapre, David",XXX,1700,1700,False,False,Nf6
+0-1,XXX,"Nepomniachtchi, Ian",1700,1700,False,False,g6
+0-1,XXX,"Kramnik, Vladimir",1700,1700,False,False,g6
+0-1,XXX,"Giraud, Thibaut",1700,1700,False,False,Nf6
+0-1,XXX,"Louapre, David",1700,1700,False,False,Nf6
+0-1,"Nepomniachtchi, Ian","Kramnik, Vladimir",1800,1800,False,False,g6
+0-1,"Nepomniachtchi, Ian","Giraud, Thibaut",1800,1800,False,False,g6
+0-1,"Nepomniachtchi, Ian","Louapre, David",1800,1800,False,False,Nf6
+0-1,"Nepomniachtchi, Ian",XXX,1800,1800,False,False,g6
+0-1,"Kramnik, Vladimir","Nepomniachtchi, Ian",1800,1800,False,False,g6
+0-1,"Kramnik, Vladimir","Giraud, Thibaut",1800,1800,False,False,g6
+0-1,"Kramnik, Vladimir","Louapre, David",1800,1800,False,False,g6
+0-1,"Kramnik, Vladimir",XXX,1800,1800,False,False,Nf6
+0-1,"Giraud, Thibaut","Nepomniachtchi, Ian",1800,1800,False,False,g6
+0-1,"Giraud, Thibaut","Kramnik, Vladimir",1800,1800,False,False,g6
+0-1,"Giraud, Thibaut","Louapre, David",1800,1800,False,False,Nf6
+0-1,"Giraud, Thibaut",XXX,1800,1800,False,False,Nf6
+0-1,"Louapre, David","Nepomniachtchi, Ian",1800,1800,False,False,g6
+0-1,"Louapre, David","Kramnik, Vladimir",1800,1800,False,False,g6
+0-1,"Louapre, David","Giraud, Thibaut",1800,1800,False,False,Nf6
+0-1,"Louapre, David",XXX,1800,1800,False,False,Nf6
+0-1,XXX,"Nepomniachtchi, Ian",1800,1800,False,False,g6
+0-1,XXX,"Kramnik, Vladimir",1800,1800,False,False,g6
+0-1,XXX,"Giraud, Thibaut",1800,1800,False,False,Nf6
+0-1,XXX,"Louapre, David",1800,1800,False,False,Nf6
+0-1,"Nepomniachtchi, Ian","Kramnik, Vladimir",2000,2000,False,False,g6
+0-1,"Nepomniachtchi, Ian","Giraud, Thibaut",2000,2000,False,False,g6
+0-1,"Nepomniachtchi, Ian","Louapre, David",2000,2000,False,False,g6
+0-1,"Nepomniachtchi, Ian",XXX,2000,2000,False,False,g6
+0-1,"Kramnik, Vladimir","Nepomniachtchi, Ian",2000,2000,False,False,g6
+0-1,"Kramnik, Vladimir","Giraud, Thibaut",2000,2000,False,False,g6
+0-1,"Kramnik, Vladimir","Louapre, David",2000,2000,False,False,g6
+0-1,"Kramnik, Vladimir",XXX,2000,2000,False,False,Nf6
+0-1,"Giraud, Thibaut","Nepomniachtchi, Ian",2000,2000,False,False,g6
+0-1,"Giraud, Thibaut","Kramnik, Vladimir",2000,2000,False,False,g6
+0-1,"Giraud, Thibaut","Louapre, David",2000,2000,False,False,g6
+0-1,"Giraud, Thibaut",XXX,2000,2000,False,False,g6
+0-1,"Louapre, David","Nepomniachtchi, Ian",2000,2000,False,False,g6
+0-1,"Louapre, David","Kramnik, Vladimir",2000,2000,False,False,g6
+0-1,"Louapre, David","Giraud, Thibaut",2000,2000,False,False,g6
+0-1,"Louapre, David",XXX,2000,2000,False,False,g6
+0-1,XXX,"Nepomniachtchi, Ian",2000,2000,False,False,g6
+0-1,XXX,"Kramnik, Vladimir",2000,2000,False,False,g6
+0-1,XXX,"Giraud, Thibaut",2000,2000,False,False,g6
+0-1,XXX,"Louapre, David",2000,2000,False,False,g6
+0-1,"Nepomniachtchi, Ian","Kramnik, Vladimir",2900,2900,False,False,g6
+0-1,"Nepomniachtchi, Ian","Giraud, Thibaut",2900,2900,False,False,g6
+0-1,"Nepomniachtchi, Ian","Louapre, David",2900,2900,False,False,g6
+0-1,"Nepomniachtchi, Ian",XXX,2900,2900,False,False,g6
+0-1,"Kramnik, Vladimir","Nepomniachtchi, Ian",2900,2900,False,False,g6
+0-1,"Kramnik, Vladimir","Giraud, Thibaut",2900,2900,False,False,g6
+0-1,"Kramnik, Vladimir","Louapre, David",2900,2900,False,False,g6
+0-1,"Kramnik, Vladimir",XXX,2900,2900,False,False,g6
+0-1,"Giraud, Thibaut","Nepomniachtchi, Ian",2900,2900,False,False,g6
+0-1,"Giraud, Thibaut","Kramnik, Vladimir",2900,2900,False,False,g6
+0-1,"Giraud, Thibaut","Louapre, David",2900,2900,False,False,g6
+0-1,"Giraud, Thibaut",XXX,2900,2900,False,False,g6
+0-1,"Louapre, David","Nepomniachtchi, Ian",2900,2900,False,False,g6
+0-1,"Louapre, David","Kramnik, Vladimir",2900,2900,False,False,g6
+0-1,"Louapre, David","Giraud, Thibaut",2900,2900,False,False,g6
+0-1,"Louapre, David",XXX,2900,2900,False,False,g6
+0-1,XXX,"Nepomniachtchi, Ian",2900,2900,False,False,g6
+0-1,XXX,"Kramnik, Vladimir",2900,2900,False,False,g6
+0-1,XXX,"Giraud, Thibaut",2900,2900,False,False,g6
+0-1,XXX,"Louapre, David",2900,2900,False,False,g6
