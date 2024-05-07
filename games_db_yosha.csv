@@ -426,3 +426,143 @@
 [Result ""0-1""]
 
 1.",0.0,False,False,,games_yosha/gamec71e6f24-53d7-4c9c-8a26-e2801342c51c,,False
+61,Stockfish,gpt-3.5-turbo-instruct,1954,?,0-1,78,1,"[White ""Carlsen, Magnus""]  
+[Black ""Kasparov, Garry""]  
+[WhiteElo ""2882""]  
+[BlackElo ""2851""] 
+[Result ""0-1""]
+
+1.",0.0,False,False,,games_yosha/gamec10b7b05-1362-41b6-a170-3191dfdca087,,False
+62,Stockfish,gpt-3.5-turbo-instruct,1954,?,1-0,221,1,"[White ""Carlsen, Magnus""]  
+[Black ""Kasparov, Garry""]  
+[WhiteElo ""2882""]  
+[BlackElo ""2851""] 
+[Result ""0-1""]
+
+1.",0.0,False,False,,games_yosha/gamec5b08257-48d7-48f3-8f2a-29d5a62afcdb,,False
+63,Stockfish,gpt-3.5-turbo-instruct,1954,?,1-0,105,1,"[White ""Carlsen, Magnus""]  
+[Black ""Kasparov, Garry""]  
+[WhiteElo ""2882""]  
+[BlackElo ""2851""] 
+[Result ""0-1""]
+
+1.",0.0,False,False,,games_yosha/game1bbdc23a-78d3-4250-86af-904bcf37797e,,False
+64,Stockfish,gpt-3.5-turbo-instruct,1954,?,0-1,128,1,"[White ""Carlsen, Magnus""]  
+[Black ""Kasparov, Garry""]  
+[WhiteElo ""2882""]  
+[BlackElo ""2851""] 
+[Result ""0-1""]
+
+1.",0.0,False,False,,games_yosha/game71a48c37-3d32-4d9f-b34c-be61ea0cb249,,False
+65,Stockfish,gpt-3.5-turbo-instruct,1954,?,1/2-1/2,114,1,"[White ""Carlsen, Magnus""]  
+[Black ""Kasparov, Garry""]  
+[WhiteElo ""2882""]  
+[BlackElo ""2851""] 
+[Result ""0-1""]
+
+1.",0.0,False,False,,games_yosha/gameef563dfe-3497-463d-933b-1242c611dad8,,False
+66,Stockfish,gpt-3.5-turbo-instruct,1954,?,1-0,81,1,"[White ""Carlsen, Magnus""]  
+[Black ""Kasparov, Garry""]  
+[WhiteElo ""2882""]  
+[BlackElo ""2851""] 
+[Result ""0-1""]
+
+1.",0.0,False,False,,games_yosha/game44779cf8-fb40-4ff2-abae-e7fbfe7d69bf,,False
+67,Stockfish,gpt-3.5-turbo-instruct,1954,?,1-0,59,1,"[White ""Carlsen, Magnus""]  
+[Black ""Kasparov, Garry""]  
+[WhiteElo ""2882""]  
+[BlackElo ""2851""] 
+[Result ""0-1""]
+
+1.",0.0,False,False,,games_yosha/game46f4e1c2-8989-45b3-ba8d-0955cf1dae78,,False
+68,Stockfish,gpt-3.5-turbo-instruct,1954,?,1-0,143,1,"[White ""Carlsen, Magnus""]  
+[Black ""Kasparov, Garry""]  
+[WhiteElo ""2882""]  
+[BlackElo ""2851""] 
+[Result ""0-1""]
+
+1.",0.0,False,False,,games_yosha/gameb09130d0-2566-4e6f-91e2-b7b81366ca73,,False
+69,Stockfish,gpt-3.5-turbo-instruct,1954,?,1/2-1/2,147,1,"[White ""Carlsen, Magnus""]  
+[Black ""Kasparov, Garry""]  
+[WhiteElo ""2882""]  
+[BlackElo ""2851""] 
+[Result ""0-1""]
+
+1.",0.0,False,False,,games_yosha/game7cfbec2c-0e4d-4bf9-8a1f-d85c78c2fd77,,False
+70,Stockfish,gpt-3.5-turbo-instruct,1954,?,1-0,147,1,"[White ""Carlsen, Magnus""]  
+[Black ""Kasparov, Garry""]  
+[WhiteElo ""2882""]  
+[BlackElo ""2851""] 
+[Result ""0-1""]
+
+1.",0.0,False,False,,games_yosha/game74af6c3e-3318-4bc8-8205-5e7c9121344c,,False
+71,Stockfish,gpt-3.5-turbo-instruct,1954,?,1/2-1/2,133,1,"[White ""Carlsen, Magnus""]  
+[Black ""Kasparov, Garry""]  
+[WhiteElo ""2882""]  
+[BlackElo ""2851""] 
+[Result ""0-1""]
+
+1.",0.0,False,False,,games_yosha/game7dce0edd-1be7-411c-a8fb-ceb531fcdd85,,False
+72,Stockfish,gpt-3.5-turbo-instruct,1954,?,*,113,1,"[White ""Carlsen, Magnus""]  
+[Black ""Kasparov, Garry""]  
+[WhiteElo ""2882""]  
+[BlackElo ""2851""] 
+[Result ""0-1""]
+
+1.",0.0,False,True,0-1,games_yosha/gamea0d12b34-eb64-44b5-83e9-26ae152fbd6e,,False
+73,Stockfish,gpt-3.5-turbo-instruct,1954,?,1-0,165,1,"[White ""Carlsen, Magnus""]  
+[Black ""Kasparov, Garry""]  
+[WhiteElo ""2882""]  
+[BlackElo ""2851""] 
+[Result ""0-1""]
+
+1.",0.0,False,False,,games_yosha/gamef99afe18-a159-4681-a9d5-502f838cd2dc,,False
+74,Stockfish,gpt-3.5-turbo-instruct,1954,?,1-0,161,1,"[White ""Carlsen, Magnus""]  
+[Black ""Kasparov, Garry""]  
+[WhiteElo ""2882""]  
+[BlackElo ""2851""] 
+[Result ""0-1""]
+
+1.",0.0,False,False,,games_yosha/game226bc35e-cf59-4d4f-ae79-d0cccea211f4,,False
+75,Stockfish,gpt-3.5-turbo-instruct,1954,?,*,65,1,"[White ""Carlsen, Magnus""]  
+[Black ""Kasparov, Garry""]  
+[WhiteElo ""2882""]  
+[BlackElo ""2851""] 
+[Result ""0-1""]
+
+1.",0.0,False,True,0-1,games_yosha/game6372e7a4-c214-4386-85e5-2ee5f38d32c9,,False
+76,Stockfish,gpt-3.5-turbo-instruct,1954,?,1-0,115,1,"[White ""Carlsen, Magnus""]  
+[Black ""Kasparov, Garry""]  
+[WhiteElo ""2882""]  
+[BlackElo ""2851""] 
+[Result ""0-1""]
+
+1.",0.0,False,False,,games_yosha/gamedc232246-8d2e-42b4-bef2-0cc18a748c22,,False
+77,Stockfish,gpt-3.5-turbo-instruct,1954,?,0-1,88,1,"[White ""Carlsen, Magnus""]  
+[Black ""Kasparov, Garry""]  
+[WhiteElo ""2882""]  
+[BlackElo ""2851""] 
+[Result ""0-1""]
+
+1.",0.0,False,False,,games_yosha/gamea8b0b6a6-ad94-45bd-8170-522304faed73,,False
+78,Stockfish,gpt-3.5-turbo-instruct,1954,?,0-1,134,1,"[White ""Carlsen, Magnus""]  
+[Black ""Kasparov, Garry""]  
+[WhiteElo ""2882""]  
+[BlackElo ""2851""] 
+[Result ""0-1""]
+
+1.",0.0,False,False,,games_yosha/game8fdf34d5-b73e-4812-8789-d11428346acb,,False
+79,Stockfish,gpt-3.5-turbo-instruct,1954,?,1/2-1/2,161,1,"[White ""Carlsen, Magnus""]  
+[Black ""Kasparov, Garry""]  
+[WhiteElo ""2882""]  
+[BlackElo ""2851""] 
+[Result ""0-1""]
+
+1.",0.0,False,False,,games_yosha/gamea541823d-a8bb-45fa-af00-adfafc063122,,False
+80,Stockfish,gpt-3.5-turbo-instruct,1954,?,1-0,51,1,"[White ""Carlsen, Magnus""]  
+[Black ""Kasparov, Garry""]  
+[WhiteElo ""2882""]  
+[BlackElo ""2851""] 
+[Result ""0-1""]
+
+1.",0.0,False,False,,games_yosha/game251270b2-0667-44e8-b49b-384e1608bea3,,False

@@ -474,7 +474,7 @@ BASE_PGN_HEADERS_ALTERED =  """[Event "Chess tournament"]
 
 # Create instances of ChessEngineConfig and GPTConfig using the provided parameters.
 chess_config = ChessEngineConfig(
-    skill_level=5,
+    skill_level=6,
     engine_depth=15,
     engine_time=None,
     random_engine=False
