@@ -19,7 +19,13 @@ I'm using the Linux `stockfish-ubuntu-x86-64-avx2` binary (version 16).
 
 ```
 export OPENAI_KEY=<your-openai-API-key>
-python ./gptchess/gpt-experiments.py
+python ./gptchess/gpt-experiments.py 
+```
+
+or if you want to run multiple games, you can use a loop like:
+
+```
+for i in {1..20}; do python gptchess/gpt-experiments.py; done
 ```
 
 Edit the source code to change the GPT version, the number of games, the number of moves per game, etc.
@@ -44,9 +50,13 @@ gpt_config = GPTConfig(
 play_game(chess_config, gpt_config, base_pgn=BASE_PGN, nmove=1, white_piece=False)
 ```
 
+The outcome is located in `output` folder and is a subfolder, with the PGN file of the game, the log of the game, and the session with GPT.
+You can then analyze the data with the Jupyter notebook `analysis.ipynb`.
+
 ### Data and analysis
 
-The data is stored in the `games.tar.gz` of this repo. 
+For convenience, we have released the data used as part of the experiment documented in the blog post. 
+It has been saved into the `games.tar.gz` of this repo. 
 I'm usually using zenodo, but the size of the data is manageable.  
 Decompress the archive to get `games` folder.
 
@@ -62,9 +72,14 @@ with plenty of folders. Each folder contains:
  * `log.txt` the log of the game
  * `session.txt` the session with GPT 
 
-`games_db`.csv contains almost all information about all the games. 
+`games_db.csv` contains almost all information about all the games, in a structured way. 
 
 `analysis.ipynb` is a Jupyter notebook to analyze the data.
 
+## Update/Misc
+
+ * new experiments based on `Monsieur Phi` suggestion/experiments (X/Twitter thread in french: https://twitter.com/MonsieurPhi/status/1781260337754366265), as a follow-up of his excellent video (in french again!) https://www.youtube.com/watch?v=6D1XIbkm4JE where I was interviewed. The basic idea is to study the impact of the prompt on the GPTs' playing skill, on the very specific position `1. e4 e5 2. Bc4 Nc6 3. Qh5`. I have to wrap-up, but the tldr is that the prompt has indeed a significant impact on the GPTs' playing skill (at least on this position!), and that we can identify intuitive patterns of prompt leading to either g6 or Nf6. See `gptchess/gpt-experiments-prompt-variations.py` and `analysis_prompt_variations.ipyng` and `prompt_variations_phi.csv`. 
+ * In parallel, Yosha Iglesias has made a fantastic video: https://www.youtube.com/watch?v=FBx95bdJzh8 further exploring prompt sensitivity and surprising skills of GPT as well as many interesting ideas worth replicating in the large. Fascinating! `analysis_yosha.ipynb` is one ongoing/modest attempt to study the impact of prompt on the GPTs' playing skill. Stay tuned for more experiments and analysis! 
+ 
 
 

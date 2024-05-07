@@ -4,13 +4,13 @@ import io
 import random
 from stockfish import Stockfish
 
-import openai
+import os
 from openai import OpenAI
 
-client = OpenAI(api_key=os.getenv('OPENAI_KEY'))
+client = OpenAI(api_key=os.getenv('OPENAI_API_KEY'))
 import chess
 import chess.pgn
-import os
+
 
 from dataclasses import dataclass
 
@@ -43,7 +43,7 @@ BASE_PGN = """[Event "FIDE World Championship Match 2024"]
 
 
 def setup_directory():
-    OUTPUT_DIR = "games/"
+    OUTPUT_DIR = "games_yosha/"
     dir_name = OUTPUT_DIR + "game" + str(uuid.uuid4())
     os.makedirs(dir_name, exist_ok=True)
     return dir_name
@@ -474,7 +474,7 @@ BASE_PGN_HEADERS_ALTERED =  """[Event "Chess tournament"]
 
 # Create instances of ChessEngineConfig and GPTConfig using the provided parameters.
 chess_config = ChessEngineConfig(
-    skill_level=4,
+    skill_level=5,
     engine_depth=15,
     engine_time=None,
     random_engine=False
@@ -488,8 +488,17 @@ gpt_config = GPTConfig(
     system_role_message=None  # Since it wasn't provided in the original call
 )
 
+YOSHA_PGN = """[White "Carlsen, Magnus"]  
+[Black "Kasparov, Garry"]  
+[WhiteElo "2882"]  
+[BlackElo "2851"] 
+[Result "0-1"]
+
+1."""
+
+
 # Call the refactored function.
-play_game(chess_config, gpt_config, base_pgn=BASE_PGN, nmove=1, white_piece=False)
+play_game(chess_config, gpt_config, base_pgn=YOSHA_PGN, nmove=1, white_piece=False)
 
 
 #
