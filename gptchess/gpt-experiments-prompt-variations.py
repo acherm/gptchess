@@ -21,11 +21,11 @@ import uuid
 client = OpenAI(api_key=os.getenv('OPENAI_KEY'))
 
 # TODO: The 'openai.organization' option isn't read in the client API. You will need to pass it when you instantiate the client, e.g. 'OpenAI(organization="")'
-# openai.organization = "" 
+# openai.organization = ""
 
 
 def setup_directory():
-    OUTPUT_DIR = "games/"
+    OUTPUT_DIR = "games-devoxx/"
     dir_name = OUTPUT_DIR + "game" + str(uuid.uuid4())
     os.makedirs(dir_name, exist_ok=True)
     return dir_name
@@ -38,7 +38,7 @@ def record_session(dir_name, prompt, response, system_role_message = None):
     with open(os.path.join(dir_name, "session.txt"), "a") as session_file:
         if system_role_message is not None:
             session_file.write("SYSTEM: " + system_role_message + "\n")
-        session_file.write("PROMPT: " + prompt + "\n")      
+        session_file.write("PROMPT: " + prompt + "\n")
         session_file.write("RESPONSE: " + response + "\n\n")
 
 
@@ -50,37 +50,37 @@ class GPTConfig:
     system_role_message: str = None
     model_gpt: str = "gpt-3.5-turbo-instruct"
 
- 
+
 def play_game(gpt_config: GPTConfig, base_prompt=""):
-    
-    
+
+
 
     temperature = gpt_config.temperature
     max_tokens = gpt_config.max_tokens
     model_gpt = gpt_config.model_gpt
 
-    
 
-    
+
+
 
     board = chess.Board()
-    
-    unknown_san = None # can be the case that GPT plays an unknown SAN (invalid move)
-        
 
- 
+    unknown_san = None # can be the case that GPT plays an unknown SAN (invalid move)
+
+
+
     response = client.completions.create(model=model_gpt,
     prompt=base_prompt,
     temperature=temperature,
     max_tokens=max_tokens)
 
 
-    resp = response.choices[0].text # completion 
+    resp = response.choices[0].text # completion
     move = extract_move_chatgpt(resp)
 
- 
+
     return move
-      
+
 import random
 
 def mk_chess_prompt(result="1-0", black_name=None, white_name=None, black_elo=None, white_elo=None,
@@ -122,7 +122,7 @@ def mk_chess_prompt(result="1-0", black_name=None, white_name=None, black_elo=No
 [Variant "Standard"]
 """
 
-    pgn_position = "1. e4 e5 2. Bc4 Nc6 3. Qh5"
+    pgn_position = "1. e4 d6 2. Bb5+"
     return pgn_headers + '\n' + pgn_position
 
 
@@ -158,19 +158,25 @@ import random
 # Define possible values for each parameter
 results = ["1-0", "1/2-1/2", "0-1"]
 # results = ["1-0", "0-1"]
-names = ["Nepomniachtchi, Ian", "Kramnik, Vladimir", "Giraud, Thibaut", "Louapre, David", "XXX"] # ["Nepomniachtchi, Ian", "Kramnik, Vladimir", "Kasparov, Gary", "Giraud, Thibaut", "Louapre, David"]
+names = ["Kramnik, Vladimir", "Carlsen, Magnus", "Nepomniachtchi, Ian", "Giraud, Thibaut", "Louapre, David", "XXX"] # ["Nepomniachtchi, Ian", "Kramnik, Vladimir", "Giraud, Thibaut", "Louapre, David", "XXX"] # ["Nepomniachtchi, Ian", "Kramnik, Vladimir", "Kasparov, Gary", "Giraud, Thibaut", "Louapre, David"]
 elos = [1000, 1400, 1700, 1800, 2000, 2900]
-# include_title = [True, False]
-include_title = [False]
+include_title = [True, False]
+# include_title = [False]
 
-# Create DataFrame
-df = pd.DataFrame(columns=["Result", "WhiteName", "BlackName", "WhiteElo", "BlackElo", "IncludeWhiteTitle", "IncludeBlackTitle", "Move"])
+col_index = pd.Index(
+    ["Result", "WhiteName", "BlackName", "WhiteElo",
+     "BlackElo", "IncludeWhiteTitle", "IncludeBlackTitle", "Move"]
+)
+
+df = pd.DataFrame(columns=col_index)   # Pyright is satisfied
+
+# df = pd.DataFrame(columns=["Result", "WhiteName", "BlackName", "WhiteElo", "BlackElo", "IncludeWhiteTitle", "IncludeBlackTitle", "Move"])
 
 data = []  # List to collect all row data
 
 
 # Generate configurations and populate the list
-# black elo = white elo to simplify 
+# black elo = white elo to simplify
 for result, white_elo, include_white_title, include_black_title in itertools.product(
     results, elos, include_title, include_title):
     for white_name in names:
@@ -196,20 +202,11 @@ df = pd.DataFrame(data)
 
 
 # Explicitly convert boolean columns if needed
-df['IncludeWhiteTitle'] = df['IncludeWhiteTitle'].astype(bool)
-df['IncludeBlackTitle'] = df['IncludeBlackTitle'].astype(bool)
+if 'IncludeWhiteTitle' in df.columns:
+    df['IncludeWhiteTitle'] = df['IncludeWhiteTitle'].astype(bool)
+if 'IncludeBlackTitle' in df.columns:
+    df['IncludeBlackTitle'] = df['IncludeBlackTitle'].astype(bool)
 
 print(df.head())
 
-df.to_csv("prompt_variations_phi.csv", index=False)
-
-
-
-
-
-
-
-
-
-
-
+df.to_csv("prompt_variations_phi-devoxx.csv", index=False)
