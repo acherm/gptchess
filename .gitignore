@@ -2,3 +2,5 @@ output/
 stockfish/
 games/
 games_yosha/
+games_gpt4o/
+games_deepseek/

@@ -1,0 +1,5 @@
+Result,WhiteName,BlackName,WhiteElo,BlackElo,IncludeWhiteTitle,IncludeBlackTitle,Move
+1-0,"Nepomniachtchi, Ian","Kramnik, Vladimir",1400,1400,False,False,Be2
+1-0,"Kramnik, Vladimir","Nepomniachtchi, Ian",1400,1400,False,False,Be2
+1-0,"Nepomniachtchi, Ian","Kramnik, Vladimir",2900,2900,False,False,Be2
+1-0,"Kramnik, Vladimir","Nepomniachtchi, Ian",2900,2900,False,False,d4

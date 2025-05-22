@@ -1,0 +1,37 @@
+Result,WhiteName,BlackName,WhiteElo,BlackElo,IncludeWhiteTitle,IncludeBlackTitle,Move
+1-0,"Nepomniachtchi, Ian","Kramnik, Vladimir",2900,2900,True,True,1-0
+1-0,"Nepomniachtchi, Ian","Giraud, Thibaut",2900,2900,True,True,chessandgames.com
+1-0,"Nepomniachtchi, Ian",XXX,2900,2900,True,True,1-0
+1-0,"Kramnik, Vladimir","Nepomniachtchi, Ian",2900,2900,True,True,1-0
+1-0,"Kramnik, Vladimir","Giraud, Thibaut",2900,2900,True,True,1-0
+1-0,"Kramnik, Vladimir",XXX,2900,2900,True,True,1-0
+1-0,"Giraud, Thibaut","Nepomniachtchi, Ian",2900,2900,True,True,chessandgames.com
+1-0,"Giraud, Thibaut","Kramnik, Vladimir",2900,2900,True,True,1-0
+1-0,"Giraud, Thibaut",XXX,2900,2900,True,True,1-0
+1-0,XXX,"Nepomniachtchi, Ian",2900,2900,True,True,here
+1-0,XXX,"Kramnik, Vladimir",2900,2900,True,True,here
+1-0,XXX,"Giraud, Thibaut",2900,2900,True,True,here
+0-1,"Nepomniachtchi, Ian","Kramnik, Vladimir",2900,2900,True,True,0-1
+0-1,"Nepomniachtchi, Ian","Giraud, Thibaut",2900,2900,True,True,```
+0-1,"Nepomniachtchi, Ian",XXX,2900,2900,True,True,here
+0-1,"Kramnik, Vladimir","Nepomniachtchi, Ian",2900,2900,True,True,here
+0-1,"Kramnik, Vladimir","Giraud, Thibaut",2900,2900,True,True,```
+0-1,"Kramnik, Vladimir",XXX,2900,2900,True,True,here
+0-1,"Giraud, Thibaut","Nepomniachtchi, Ian",2900,2900,True,True,```
+0-1,"Giraud, Thibaut","Kramnik, Vladimir",2900,2900,True,True,0-1
+0-1,"Giraud, Thibaut",XXX,2900,2900,True,True,here
+0-1,XXX,"Nepomniachtchi, Ian",2900,2900,True,True,0-1
+0-1,XXX,"Kramnik, Vladimir",2900,2900,True,True,0-1
+0-1,XXX,"Giraud, Thibaut",2900,2900,True,True,```
+,"Nepomniachtchi, Ian","Kramnik, Vladimir",2900,2900,True,True,here
+,"Nepomniachtchi, Ian","Giraud, Thibaut",2900,2900,True,True,[/pgn]
+,"Nepomniachtchi, Ian",XXX,2900,2900,True,True,[/pgn]
+,"Kramnik, Vladimir","Nepomniachtchi, Ian",2900,2900,True,True,[/pgn]
+,"Kramnik, Vladimir","Giraud, Thibaut",2900,2900,True,True,[/pgn]
+,"Kramnik, Vladimir",XXX,2900,2900,True,True,[/pgn]
+,"Giraud, Thibaut","Nepomniachtchi, Ian",2900,2900,True,True,[/pgn]
+,"Giraud, Thibaut","Kramnik, Vladimir",2900,2900,True,True,[/pgn]
+,"Giraud, Thibaut",XXX,2900,2900,True,True,[/pgn]
+,XXX,"Nepomniachtchi, Ian",2900,2900,True,True,[/pgn]
+,XXX,"Kramnik, Vladimir",2900,2900,True,True,[/pgn]
+,XXX,"Giraud, Thibaut",2900,2900,True,True,[/pgn]

@@ -1,0 +1,25 @@
+Result,WhiteName,BlackName,WhiteElo,BlackElo,IncludeWhiteTitle,IncludeBlackTitle,Move
+1-0,"Nepomniachtchi, Ian","Kramnik, Vladimir",2900,2900,True,True,Nf3
+1-0,"Nepomniachtchi, Ian","Giraud, Thibaut",2900,2900,True,True,Nf3
+1-0,"Nepomniachtchi, Ian",XXX,2900,2900,True,True,Nf3
+1-0,"Kramnik, Vladimir","Nepomniachtchi, Ian",2900,2900,True,True,Nf3
+1-0,"Kramnik, Vladimir","Giraud, Thibaut",2900,2900,True,True,Nf3
+1-0,"Kramnik, Vladimir",XXX,2900,2900,True,True,Nf3
+1-0,"Giraud, Thibaut","Nepomniachtchi, Ian",2900,2900,True,True,Nf3
+1-0,"Giraud, Thibaut","Kramnik, Vladimir",2900,2900,True,True,Nf3
+1-0,"Giraud, Thibaut",XXX,2900,2900,True,True,Nf3
+1-0,XXX,"Nepomniachtchi, Ian",2900,2900,True,True,Nf3
+1-0,XXX,"Kramnik, Vladimir",2900,2900,True,True,Nf3
+1-0,XXX,"Giraud, Thibaut",2900,2900,True,True,Nf3
+0-1,"Nepomniachtchi, Ian","Kramnik, Vladimir",2900,2900,True,True,Nf3
+0-1,"Nepomniachtchi, Ian","Giraud, Thibaut",2900,2900,True,True,Nf3
+0-1,"Nepomniachtchi, Ian",XXX,2900,2900,True,True,Nf3
+0-1,"Kramnik, Vladimir","Nepomniachtchi, Ian",2900,2900,True,True,Nf3
+0-1,"Kramnik, Vladimir","Giraud, Thibaut",2900,2900,True,True,Nf3
+0-1,"Kramnik, Vladimir",XXX,2900,2900,True,True,Nf3
+0-1,"Giraud, Thibaut","Nepomniachtchi, Ian",2900,2900,True,True,Nf3
+0-1,"Giraud, Thibaut","Kramnik, Vladimir",2900,2900,True,True,Nf3
+0-1,"Giraud, Thibaut",XXX,2900,2900,True,True,Nf3
+0-1,XXX,"Nepomniachtchi, Ian",2900,2900,True,True,Nf3
+0-1,XXX,"Kramnik, Vladimir",2900,2900,True,True,Nf3
+0-1,XXX,"Giraud, Thibaut",2900,2900,True,True,Nf3

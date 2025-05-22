@@ -6,17 +6,15 @@ from stockfish import Stockfish
 
 import os
 from openai import OpenAI
-
-client = OpenAI(api_key=os.getenv('OPENAI_API_KEY'))
 import chess
 import chess.pgn
-
-
 from dataclasses import dataclass
 
-from parsing_moves_gpt import extract_move_chatgpt
+from parsing_moves_gpt import extract_move_chatgpt, extract_move_deepseek
 
 import uuid
+
+from typing import Optional
 
 # TODO: The 'openai.organization' option isn't read in the client API. You will need to pass it when you instantiate the client, e.g. 'OpenAI(organization="")'
 # openai.organization = "" 
@@ -41,9 +39,29 @@ BASE_PGN = """[Event "FIDE World Championship Match 2024"]
 
 1."""
 
+BASE_PGN_BLACK = """[Event "FIDE World Championship Match 2024"]
+[Site "Los Angeles, USA"]
+[Date "2024.12.01"]
+[Round "5"]
+[White "Nepomniachtchi, Ian"]
+[Black "Carlsen, Magnus"]
+[Result "0-1"]
+[WhiteElo "2812"]
+[WhiteTitle "GM"]
+[WhiteFideId "1503014"]
+[BlackElo "2885"]
+[BlackTitle "GM"]
+[BlackFideId "4168119"]
+[TimeControl "40/7200:20/3600:900+30"]
+[UTCDate "2024.11.27"]
+[UTCTime "09:01:25"]
+[Variant "Standard"]
+
+1."""
+
 
 def setup_directory():
-    OUTPUT_DIR = "games_yosha/"
+    OUTPUT_DIR = "games_deepseek/"
     dir_name = OUTPUT_DIR + "game" + str(uuid.uuid4())
     os.makedirs(dir_name, exist_ok=True)
     return dir_name
@@ -58,23 +76,6 @@ def record_session(dir_name, prompt, response, system_role_message = None):
             session_file.write("SYSTEM: " + system_role_message + "\n")
         session_file.write("PROMPT: " + prompt + "\n")      
         session_file.write("RESPONSE: " + response + "\n\n")
-
-@dataclass
-class ChessEngineConfig:
-    skill_level: int
-    engine_depth: int = 20
-    engine_time: int = None
-    random_engine: bool = False
-
-@dataclass
-class GPTConfig:
-    temperature: float = 0
-    max_tokens: int = 4
-    chat_gpt: bool = False
-    system_role_message: str = None
-    model_gpt: str = "gpt-3.5-turbo-instruct"
-
-from dataclasses import asdict
 
 import os
 
@@ -92,18 +93,44 @@ class GPTConfig:
     chat_gpt: bool = False
     system_role_message: str = None
     model_gpt: str = "gpt-3.5-turbo-instruct"
+    use_deepseek: bool = False
+    base_url: str = None  # Only needed for non-OpenAI APIs
+
+def create_ai_client(gpt_config: GPTConfig) -> OpenAI:
+    if gpt_config.use_deepseek:
+        api_key = os.getenv('DEEPSEEK_API_KEY')
+        if not api_key:
+            raise ValueError("DEEPSEEK_API_KEY environment variable not set")
+        return OpenAI(
+            api_key=api_key,
+            base_url=gpt_config.base_url or "https://api.deepseek.com"
+        )
+    
+    api_key = os.getenv('OPENAI_API_KEY')
+    if not api_key:
+        raise ValueError("OPENAI_API_KEY environment variable not set")
+    return OpenAI(api_key=api_key)
 
 def save_metainformation_experiment(dir_name, chess_config: ChessEngineConfig, gpt_config: GPTConfig, base_pgn, nmove, white_piece, engine_parameters):
     with open(os.path.join(dir_name, "metainformation.txt"), "w") as metainformation_file:
+        # Basic model info
         metainformation_file.write(f"model_gpt: {gpt_config.model_gpt}\n")
+        metainformation_file.write(f"use_deepseek: {gpt_config.use_deepseek}\n")
+        metainformation_file.write(f"base_url: {gpt_config.base_url if gpt_config.base_url else 'None'}\n")
+        
+        # Chess engine configuration
         metainformation_file.write(f"skill_level: {chess_config.skill_level}\n")
         metainformation_file.write(f"random_engine: {chess_config.random_engine}\n")
         metainformation_file.write(f"white_piece: {white_piece}\n")
         metainformation_file.write(f"engine_depth: {chess_config.engine_depth}\n")
         metainformation_file.write(f"engine_time: {chess_config.engine_time}\n")
+        
+        # Game configuration
         metainformation_file.write(f"base_pgn: {base_pgn}\n")
         metainformation_file.write(f"nmove: {nmove}\n")
         metainformation_file.write(f"engine_parameters: {engine_parameters}\n")
+        
+        # Model parameters
         metainformation_file.write(f"temperature: {gpt_config.temperature}\n")
         metainformation_file.write(f"max_tokens: {gpt_config.max_tokens}\n")
         metainformation_file.write(f"chat_gpt: {gpt_config.chat_gpt}\n")
@@ -148,6 +175,20 @@ def skill_to_elo(n):
 
 from dataclasses import dataclass
 
+def get_last_move_str(board, white_piece):
+    # Get the last move in SAN notation directly from the move stack
+    last_move = board.move_stack[-1]
+    
+    # Create a temporary board to push the last move
+    temp_board = board.copy()
+    temp_board.pop()
+    # temp_board.push(last_move)
+    
+    move_number = len(temp_board.move_stack) // 2 + 1  # Calculate the move number
+    # Determine the correct format based on the turn
+    move_str = f"{move_number}... {temp_board.san(last_move)}" if white_piece else f"{move_number}. {temp_board.san(last_move)}"  # Format as '4... a6' for Black, '4. a6' for White
+    
+    return move_str
 
 
 # TODO: chess engine: SF, random, Leela, etc.
@@ -159,7 +200,12 @@ from dataclasses import dataclass
 def play_game(chess_config: ChessEngineConfig, gpt_config: GPTConfig, base_pgn=BASE_PGN, nmove=1, white_piece=True):
 # def play_game(skill_level, base_pgn=BASE_PGN, nmove=1, random_engine = False, model_gpt = "gpt-3.5-turbo-instruct", white_piece=True, engine_depth=20, engine_time=None, temperature=0, max_tokens=4, chat_gpt=False, system_role_message = None):
 
-    pgn = base_pgn
+    # Initialize pgn differently for DeepSeek
+    if gpt_config.use_deepseek:
+        pgn = ("1. " if nmove != 1 else "") + ("Let's play a chess game. You start!" if white_piece and nmove == 1 else "") # TODO: black piece
+    else:
+        pgn = base_pgn
+
     skill_level = chess_config.skill_level
     engine_depth = chess_config.engine_depth
     engine_time = chess_config.engine_time
@@ -171,6 +217,8 @@ def play_game(chess_config: ChessEngineConfig, gpt_config: GPTConfig, base_pgn=B
     system_role_message = gpt_config.system_role_message
     model_gpt = gpt_config.model_gpt
 
+    # Create AI client at the start of the function
+    ai_client = create_ai_client(gpt_config)
 
     dir_name = setup_directory()
     print(dir_name)
@@ -196,26 +244,38 @@ def play_game(chess_config: ChessEngineConfig, gpt_config: GPTConfig, base_pgn=B
 
     unknown_san = None # can be the case that GPT plays an unknown SAN (invalid move)
 
+    # Initialize msgs outside the conditional block
+    msgs = [{"role": "system", "content": system_role_message}]
+    
+    if len(board.move_stack) == 0:
+        msgs.append({"role": "user", "content": pgn})
+    else:
+        # Get the last move in SAN notation directly from the move stack
+        move_str = get_last_move_str(board, white_piece)
+        msgs.append({"role": "user", "content": move_str})
+    
     # If GPT plays as white, it should make the first move.
     if white_piece:
         
 
-        if (chat_gpt):
-            response = client.chat.completions.create(model=model_gpt,
-            messages=[
-                {"role": "system", "content": system_role_message},
-                {"role": "user", "content": pgn}        
-            ], 
-            temperature=temperature,
-            max_tokens=max_tokens)
+        # Ensure the last message is a user message
+        if chat_gpt:
+            # Set the last message to user if it's chat_gpt
+            msgs[-1] = {"role": "user", "content": pgn}  
+            response = ai_client.chat.completions.create(
+                model="deepseek-reasoner" if gpt_config.use_deepseek else gpt_config.model_gpt,
+                messages=msgs, 
+                temperature=temperature,
+                max_tokens=max_tokens)
         else:
-            response = client.completions.create(model=model_gpt,
-            prompt=pgn,
-            temperature=temperature,
-            max_tokens=max_tokens)
+            response = ai_client.completions.create(
+                model=gpt_config.model_gpt,
+                prompt=pgn,
+                temperature=temperature,
+                max_tokens=max_tokens)
 
         if chat_gpt:
-            resp = response.choices[0].message.content
+            resp = response.choices[0].message.content              
         else:
             resp = response.choices[0].text # completion 
 
@@ -223,7 +283,14 @@ def play_game(chess_config: ChessEngineConfig, gpt_config: GPTConfig, base_pgn=B
 
 
         if chat_gpt:
-            san_move = extract_move_chatgpt(resp)
+            if gpt_config.use_deepseek:
+                # First try to get the move directly from DeepSeek's response
+                san_move = extract_move_deepseek(resp)
+                reasoning_content = response.choices[0].message.reasoning_content  # Log reasoning content
+                log_msg(dir_name, f"DeepSeek response: {resp}, \nExtracted move: {san_move}\nReasoning: {reasoning_content}")  # Log reasoning content
+            else:
+                san_move = extract_move_chatgpt(resp)
+            log_msg(dir_name, "SAN MOVE: " + resp + " " + str(san_move))
         else:
             san_move = resp.strip().split()[0]
         
@@ -285,30 +352,49 @@ def play_game(chess_config: ChessEngineConfig, gpt_config: GPTConfig, base_pgn=B
         
 
         if (chat_gpt):
-            msgs = [{"role": "system", "content": system_role_message}]
-        
-            nply = 1
-            temp_board = chess.pgn.Game().board()
-            for move in chess.pgn.Game.from_board(board).mainline_moves():
+            if gpt_config.use_deepseek:
+                # For DeepSeek, use a more natural language prompt
+                if nmove == 1 and white_piece is False:
+                    resp = "The chess game has started and you have black pieces. I play first with the move 1." + pgn + " It's now your turn!"
+                if nmove != 1 and white_piece is False:
+                    resp = ""
+                msgs.append({"role": "assistant", "content": resp})
+                san_move = extract_move_deepseek(resp)
+                print("DEBUG deepseek", msgs)
+                print("DEBUG deepseek (board stack)", board.move_stack)
                 
-                move_san = temp_board.san(move) # parse_san(str(move))              
                 
-                if nply % 2 != 0:
-                    move_str = str(int(nply/2) + 1) + '. ' + str(move_san)
-                else:
-                    move_str = str(int(nply/2)) + '... ' + str(move_san)
+                move_str = get_last_move_str(board, white_piece)
+
+                msgs.append({"role": "user", "content": move_str})
+                print("DEBUG deepseek (move played by SF)", move_str)
+                log_msg(dir_name, f"DeepSeek response: {resp}, extracted move: {san_move}")
+                log_msg(dir_name, str(msgs))
+            else:
+                # Original ChatGPT logic
+                msgs.append({"role": "assistant", "content": resp})
+                nply = 1
+                temp_board = chess.pgn.Game().board()
+                for move in chess.pgn.Game.from_board(board).mainline_moves():
                     
-                if white_piece and nply % 2 != 0:
-                    msgs.append({"role": "assistant", "content": move_str})
-                else:
-                    msgs.append({"role": "user", "content": move_str})
+                    move_san = temp_board.san(move) # parse_san(str(move))              
+                    
+                    if nply % 2 != 0:
+                        move_str = str(int(nply/2) + 1) + '. ' + str(move_san)
+                    else:
+                        move_str = str(int(nply/2)) + '... ' + str(move_san)
+                        
+                    if white_piece and nply % 2 != 0:
+                        msgs.append({"role": "assistant", "content": move_str})
+                    else:
+                        msgs.append({"role": "user", "content": move_str})
 
-                temp_board.push(move)
-                nply = nply + 1
+                    temp_board.push(move)
+                    nply = nply + 1
 
-            log_msg(dir_name, str(msgs))
+                log_msg(dir_name, str(msgs))
 
-            response = client.chat.completions.create(model=model_gpt,
+            response = ai_client.chat.completions.create(model=model_gpt,
             messages=msgs, # [
                 # {"role": "system", "content": system_role_message},
                 # {"role": "user", "content": pgn}
@@ -316,7 +402,7 @@ def play_game(chess_config: ChessEngineConfig, gpt_config: GPTConfig, base_pgn=B
             temperature=temperature,
             max_tokens=max_tokens)
         else:
-            response = client.completions.create(model=model_gpt,
+            response = ai_client.completions.create(model=model_gpt,
             prompt=pgn,
             temperature=temperature,
             max_tokens=max_tokens)      
@@ -329,7 +415,13 @@ def play_game(chess_config: ChessEngineConfig, gpt_config: GPTConfig, base_pgn=B
         record_session(dir_name, pgn, resp)
 
         if chat_gpt:
-            san_move = extract_move_chatgpt(resp)
+            if gpt_config.use_deepseek:
+                # First try to get the move directly from DeepSeek's response
+                san_move = extract_move_deepseek(resp)
+                reasoning_content = response.choices[0].message.reasoning_content  # Log reasoning content
+                log_msg(dir_name, f"DeepSeek response: {resp}, extracted move: {san_move}, \nReasoning: {reasoning_content}")
+            else:
+                san_move = extract_move_chatgpt(resp)
             log_msg(dir_name, "SAN MOVE: " + resp + " " + str(san_move))
         else:
             san_move = resp.strip().split()[0]
@@ -474,18 +566,27 @@ BASE_PGN_HEADERS_ALTERED =  """[Event "Chess tournament"]
 
 # Create instances of ChessEngineConfig and GPTConfig using the provided parameters.
 chess_config = ChessEngineConfig(
-    skill_level=6,
+    skill_level=0,
     engine_depth=15,
     engine_time=None,
     random_engine=False
 )
 
+# gpt_config = GPTConfig(
+#     model_gpt="gpt-3.5-turbo-instruct",
+#     temperature=0.0,
+#     max_tokens=5,
+#     chat_gpt=False,
+#     system_role_message=None  # Since it wasn't provided in the original call
+# )
+
 gpt_config = GPTConfig(
-    model_gpt="gpt-3.5-turbo-instruct",
+    model_gpt="deepseek-reasoner",
     temperature=0.0,
-    max_tokens=5,
-    chat_gpt=False,
-    system_role_message=None  # Since it wasn't provided in the original call
+    max_tokens=4000,
+    chat_gpt=True,
+    system_role_message="You are a professional chess player. You are playing a serious chess game, using PGN notation. When it's your turn, you have to play your move using PGN notation. For your final decision, use <played_move>...</played_move> tags.",
+    use_deepseek=True
 )
 
 YOSHA_PGN = """[White "Carlsen, Magnus"]  
@@ -498,8 +599,11 @@ YOSHA_PGN = """[White "Carlsen, Magnus"]
 
 
 # Call the refactored function.
-play_game(chess_config, gpt_config, base_pgn=YOSHA_PGN, nmove=1, white_piece=False)
+# play_game(chess_config, gpt_config, base_pgn=BASE_PGN, nmove=1, white_piece=True)
 
+# play_game(chess_config, gpt_config, base_pgn=BASE_PGN_BLACK, nmove=1, white_piece=False)
+
+play_game(chess_config, gpt_config, base_pgn="", nmove=1, white_piece=True)
 
 #
 # play_game(skill_level=-1, base_pgn='It is your turn! You have white pieces. Please complete the chess game using PGN notation. 1.', nmove=1, random_engine=True, model_gpt = "gpt-4", white_piece=True, engine_depth=15, engine_time=None, temperature=0.0, chat_gpt=True, max_tokens=6, system_role_message="You are a professional, top international grand-master chess player. We are playing a serious chess game, using PGN notation. When it's your turn, you have to play your move using PGN notation.")
@@ -542,6 +646,7 @@ def diversify_with_knownopenings():
 
 # play_game(skill_level=4, base_pgn=BASE_PGN, nmove=1, random_engine=False, model_gpt = "gpt-3.5-turbo-instruct", white_piece=True, engine_depth=15, engine_time=None)
 # text-davinci-003 
+
 
 
 
