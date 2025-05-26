@@ -22,11 +22,15 @@ def test_extract_move_deepseek():
     def run_test_case(resp_str, expected_result):
         result = extract_move_deepseek(resp_str)
         assert result == expected_result, f"Expected '{expected_result}', but got '{result}'"
-    
+
     run_test_case(
         resp_str="<played_move>5. Qg4</played_move>",
         expected_result="Qg4"
     )
+    run_test_case(
+        resp_str="<played_move>2. Nf3</played_move>",
+        expected_result="Nf3"
+    )
 
 test_extract_move_deepseek()
-# To run the tests, use the command: pytest test_parsing_moves_gpt.py 
+# To run the tests, use the command: pytest test_parsing_moves_gpt.py
